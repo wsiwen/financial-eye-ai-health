@@ -31,6 +31,44 @@ C_RED = "#D45959"
 C_ORANGE = "#E2A479"
 C_PURPLE = "#5E379D"
 
+# 全局主题注入：侧边栏 / 主按钮 / 标题统一色板
+st.markdown(
+    f"""
+    <style>
+    /* 侧边栏 */
+    section[data-testid="stSidebar"] {{
+        background: linear-gradient(180deg, #F0F4FA 0%, #E6EDF6 100%);
+        border-right: 1px solid #D5DEEA;
+    }}
+    section[data-testid="stSidebar"] h1,
+    section[data-testid="stSidebar"] h2,
+    section[data-testid="stSidebar"] h3 {{
+        color: {C_BLUE};
+    }}
+    /* 主按钮（开始体检） */
+    section[data-testid="stSidebar"] button[kind="primary"],
+    button[kind="primaryFormSubmit"] {{
+        background: {C_BLUE} !important;
+        border: none !important;
+        border-radius: 6px !important;
+    }}
+    button[kind="primary"]:hover {{
+        background: #245A8F !important;
+    }}
+    /* 主标题 */
+    h1, h2, h3 {{ color: #1e3a8a !important; }}
+    /* 分割线 */
+    hr {{ border-color: #D5DEEA !important; }}
+    /* Tab 栏选中色 */
+    button[role="tab"][aria-selected="true"] {{
+        border-top: 3px solid {C_BLUE} !important;
+        color: {C_BLUE} !important;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 
 @st.cache_data(show_spinner="正在拉取财报数据...", ttl=3600)
 def load_statements(code: str, max_periods: int):
