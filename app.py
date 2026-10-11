@@ -59,15 +59,24 @@ st.markdown(
     h1, h2, h3 {{ color: #1e3a8a !important; }}
     /* 分割线 */
     hr {{ border-color: #D5DEEA !important; }}
-    /* Tab 栏：只居中，不动布局结构 */
-    .stTabs [data-baseweb="tab-list"] {{
+    /* Tab 栏居中 + 加大字号（用 .stTabs 顶层 class 兜底） */
+    .stTabs [data-testid="stTabList"],
+    .stTabs [data-baseweb="tab-list"],
+    .stTabs > div > div[role="tablist"],
+    .stTabs [class*="tabList"],
+    .stTabs [class*="tab-list"] {{
         justify-content: center !important;
-        gap: 16px !important;
+        -webkit-box-pack: center !important;
+        display: flex !important;
+        gap: 14px !important;
     }}
-    .stTabs [data-baseweb="tab"] {{
-        font-size: 17px !important;
+    .stTabs [data-testid="stTab"],
+    .stTabs [data-baseweb="tab"],
+    .stTabs [role="tab"],
+    .stTabs button {{
+        font-size: 18px !important;
         font-weight: 600 !important;
-        padding: 8px 20px !important;
+        padding: 10px 22px !important;
     }}
     /* Tab 栏选中色 */
     .stTabs [aria-selected="true"] {{
