@@ -59,10 +59,27 @@ st.markdown(
     h1, h2, h3 {{ color: #1e3a8a !important; }}
     /* 分割线 */
     hr {{ border-color: #D5DEEA !important; }}
+    /* Tab 栏居中 + 加大字号，像导航条 */
+    [data-testid="stTabs"] [data-testid="stTabList"] {{
+        justify-content: center !important;
+        gap: 12px !important;
+        padding: 6px 16px !important;
+        background: #F0F5FB !important;
+        border-radius: 10px !important;
+        margin-bottom: 8px !important;
+    }}
+    button[role="tab"] {{
+        font-size: 17px !important;
+        font-weight: 600 !important;
+        padding: 10px 22px !important;
+        color: #475569 !important;
+    }}
     /* Tab 栏选中色 */
     button[role="tab"][aria-selected="true"] {{
         border-top: 3px solid {C_BLUE} !important;
         color: {C_BLUE} !important;
+        background: #ffffff !important;
+        border-radius: 8px 8px 0 0 !important;
     }}
     </style>
     """,
@@ -100,8 +117,8 @@ def _company_bundle(code: str, max_periods: int):
 
 def main():
     st.markdown(
-        "<div style='font-size:34px;font-weight:800;color:#1e3a8a;margin-bottom:2px;'>慧眼 · AI 财报风险体检 Agent</div>"
-        "<div style='font-size:14px;color:#64748b;margin:2px 0 14px;'>"
+        "<div style='font-size:42px;font-weight:800;color:#1e3a8a;margin-bottom:4px;text-align:center;'>慧眼 · AI 财报风险体检 Agent</div>"
+        "<div style='font-size:15px;color:#64748b;margin:4px 0 18px;text-align:center;'>"
         "输入 A 股代码 → 三大报表勾稽校验 → 四维指标体检 → 行业对标 → 对话式 AI 解读（选题 7-①）</div>",
         unsafe_allow_html=True,
     )
