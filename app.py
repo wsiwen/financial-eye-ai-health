@@ -59,35 +59,20 @@ st.markdown(
     h1, h2, h3 {{ color: #1e3a8a !important; }}
     /* 分割线 */
     hr {{ border-color: #D5DEEA !important; }}
-    /* Tab 栏居中 + 加大字号，像导航条（多选择器兜底） */
-    .stTabs [data-baseweb="tab-list"],
-    .stTabs [role="tablist"],
-    div[data-testid="stTabs"] > div > div,
-    div[class*="stTabs"] > div > div[class*="tab"] {{
+    /* Tab 栏：只居中，不动布局结构 */
+    .stTabs [data-baseweb="tab-list"] {{
         justify-content: center !important;
         gap: 16px !important;
-        padding: 8px 20px !important;
-        background: #F0F5FB !important;
-        border-radius: 10px !important;
-        margin-bottom: 10px !important;
-        display: flex !important;
     }}
-    .stTabs [data-baseweb="tab"],
-    .stTabs [role="tab"],
-    div[data-testid="stTabs"] button,
-    div[class*="stTabs"] button {{
-        font-size: 18px !important;
+    .stTabs [data-baseweb="tab"] {{
+        font-size: 17px !important;
         font-weight: 600 !important;
-        padding: 10px 24px !important;
-        color: #475569 !important;
+        padding: 8px 20px !important;
     }}
     /* Tab 栏选中色 */
-    .stTabs [aria-selected="true"],
-    div[data-testid="stTabs"] button[aria-selected="true"],
-    div[class*="stTabs"] button[aria-selected="true"] {{
+    .stTabs [aria-selected="true"] {{
         border-top: 3px solid {C_BLUE} !important;
         color: {C_BLUE} !important;
-        background: #ffffff !important;
     }}
     </style>
     """,
