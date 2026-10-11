@@ -60,26 +60,25 @@ st.markdown(
     /* 分割线 */
     hr {{ border-color: #D5DEEA !important; }}
     /* Tab 栏居中 + 加大字号，像导航条 */
-    [data-testid="stTabs"] [data-testid="stTabList"] {{
+    .stTabs [data-baseweb="tab-list"] {{
         justify-content: center !important;
-        gap: 12px !important;
-        padding: 6px 16px !important;
+        gap: 16px !important;
+        padding: 8px 20px !important;
         background: #F0F5FB !important;
         border-radius: 10px !important;
-        margin-bottom: 8px !important;
+        margin-bottom: 10px !important;
     }}
-    button[role="tab"] {{
-        font-size: 17px !important;
+    .stTabs [data-baseweb="tab"] {{
+        font-size: 18px !important;
         font-weight: 600 !important;
-        padding: 10px 22px !important;
+        padding: 10px 24px !important;
         color: #475569 !important;
     }}
     /* Tab 栏选中色 */
-    button[role="tab"][aria-selected="true"] {{
+    .stTabs [aria-selected="true"] {{
         border-top: 3px solid {C_BLUE} !important;
         color: {C_BLUE} !important;
         background: #ffffff !important;
-        border-radius: 8px 8px 0 0 !important;
     }}
     </style>
     """,
