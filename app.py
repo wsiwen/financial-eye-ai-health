@@ -100,8 +100,8 @@ def _company_bundle(code: str, max_periods: int):
 
 def main():
     st.markdown(
-        "<div style='font-size:26px;font-weight:700;color:#1e3a8a;'>慧眼 · AI 财报风险体检 Agent</div>"
-        "<div style='font-size:13px;color:#64748b;margin:2px 0 10px;'>"
+        "<div style='font-size:34px;font-weight:800;color:#1e3a8a;margin-bottom:2px;'>慧眼 · AI 财报风险体检 Agent</div>"
+        "<div style='font-size:14px;color:#64748b;margin:2px 0 14px;'>"
         "输入 A 股代码 → 三大报表勾稽校验 → 四维指标体检 → 行业对标 → 对话式 AI 解读（选题 7-①）</div>",
         unsafe_allow_html=True,
     )
