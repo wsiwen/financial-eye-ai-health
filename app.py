@@ -63,7 +63,7 @@ st.markdown(
     .stTabs [data-baseweb="tab-list"],
     .stTabs [role="tablist"],
     div[data-testid="stTabs"] > div > div,
-    div[class*="stTabs"] > div > div[class*="tab"] {
+    div[class*="stTabs"] > div > div[class*="tab"] {{
         justify-content: center !important;
         gap: 16px !important;
         padding: 8px 20px !important;
@@ -71,24 +71,24 @@ st.markdown(
         border-radius: 10px !important;
         margin-bottom: 10px !important;
         display: flex !important;
-    }
+    }}
     .stTabs [data-baseweb="tab"],
     .stTabs [role="tab"],
     div[data-testid="stTabs"] button,
-    div[class*="stTabs"] button {
+    div[class*="stTabs"] button {{
         font-size: 18px !important;
         font-weight: 600 !important;
         padding: 10px 24px !important;
         color: #475569 !important;
-    }
+    }}
     /* Tab 栏选中色 */
     .stTabs [aria-selected="true"],
     div[data-testid="stTabs"] button[aria-selected="true"],
-    div[class*="stTabs"] button[aria-selected="true"] {
+    div[class*="stTabs"] button[aria-selected="true"] {{
         border-top: 3px solid {C_BLUE} !important;
         color: {C_BLUE} !important;
         background: #ffffff !important;
-    }
+    }}
     </style>
     """,
     unsafe_allow_html=True,
